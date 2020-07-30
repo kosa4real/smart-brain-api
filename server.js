@@ -3,8 +3,6 @@ const bodyParser = require( "body-parser");
 const bcrypt = require( "bcrypt-nodejs");
 var cors = require('cors');
 var knex = require('knex') 
-
-
 var register = require('./controllers/register');
 var signin = require('./controllers/signin') 
 var profile = require('./controllers/signin') 
@@ -42,6 +40,6 @@ app.post('/imageUrl', (req, res) => {image.handleApiCall(req, res)})
 
 
 app.listen(process.env.PORT || 300, ()=> {
-	console.log(`App is about to start running on port 3001${process.env.PORT}`);
+	console.log(`App is about to start running on port ${process.env.PORT}`);
 })
 
